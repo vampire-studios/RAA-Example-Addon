@@ -1,25 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "raa_example",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "RAA Example Addon",
+  "description": "This is an example description! Tell everyone what your addon (mod) is about!",
   "authors": [
     "Me!"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/vampire-studios/RAA-Example-Addon"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/raa_example/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "raa:addon": [
+      "io.github.vampirestudios.raa_example.ExampleAddon"
+    ],
+    "raa:addon_client": [
+      "io.github.vampirestudios.raa_example.ExampleAddonClient"
     ]
   },
   "mixins": [
@@ -29,7 +32,8 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.15.x"
+    "raa_core": "*",
+    "minecraft": ">1.16-alpha.20.20.a"
   },
   "suggests": {
     "flamingo": "*"
